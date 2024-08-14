@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firsttxt"
+        android:layout_marginTop="10dp"
+        android:text="Welcome"
+        android:layout_centerHorizontal="true"
+        android:textSize="28dp"
+        android:textStyle="italic|bold"
+        android:textColor="@color/darkPurple"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="17dp"
+        android:id="@+id/infotxt"
+        android:layout_below="@+id/firsttxt"
+        android:text="\t\tThis program will help you to sort your data with"
+        android:textStyle="italic"
+        android:textColor="@color/lighterPurple"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bst"
+        android:layout_below="@+id/infotxt"
+        android:textColor="@color/lighterPurple"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:text="((Binary Search Tree))"/>
+
+    <EditText
+        android:id="@+id/insertEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Insert value"
+        android:layout_below="@+id/bst" />
+
+    <Button
+        android:id="@+id/insertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/insertEditText"
+        android:layout_marginTop="16dp"
+        android:onClick="onInsert"
+        android:text="Insert" />
+
+    <EditText
+        android:id="@+id/deleteEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/insertEditText"
+        android:layout_marginTop="65dp"
+        android:hint="Delete value" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/deleteEditText"
+        android:layout_marginTop="16dp"
+        android:onClick="onDelete"
+        android:text="Delete" />
+
+    <com.example.mya.BinaryTreeView
+        android:id="@+id/binaryTreeView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/deleteButton"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
